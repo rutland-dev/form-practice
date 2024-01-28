@@ -3,8 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Lato&family=Rubik+Doodle+Triangles&family=Sevillana&display=swap" rel="stylesheet">
+    <title>Form Validation</title>
 </head>
 <body>
+    <div class="header">
+        <h1>Form Validation</h1>
+    </div>
+    <div class="content">
+        <h2>Please Enter Your Information Below</h2>
+        <div class="form">
+            <form action="" method="post">
+                <div class="email-div">
+                    <label for="email">Enter Your Email Address <span id="email-span"></span></label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="country-div">
+                    <label for="country">What Country Are You In?<span id="country-span"></span></label>
+                    <input type="text" name="country" id="country" required>
+                </div>
+                <div class="zip-code-div">
+                    <label for="zip-code">What Is Your Zip Code?<span id="zip-code-span"></span></label>
+                    <input type="text" name="zip-code" id="zip-code" required pattern="/^[0-9]{5}$/">
+                </div>
+                <div class="outer-password-div">
+
+                    <div class="inner-password-div">
+                        <label for="password">Choose A Password<span id="password-span"></span></label>
+                        <input type="password" name="password" id="password" required minlength="8" maxlength="15">
+                    </div>
+
+                    <div class="inner-confirm-div">
+                        <label for="password-confirm">Confirm Your Password<span id="password-confirm-span"></span></label>
+                        <input type="password-confirm" name="password-confirm" id="password-confirm" required minlength="8" maxlength="15">
+                    </div>
+
+                </div>
+                <div class="buttons">
+                    <button type="button" id="submit">Submit</button>
+                    <button type="button" id="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Joshua Rutland</p>
+        <a href="http://www.github.com/rutland-dev/">GitHub</a>
+    </div>
 </body>
 </html>
